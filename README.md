@@ -20,4 +20,4 @@ For Google Play Store compliance regarding Camera permissions (`android.permissi
 ## 📫 Contact & Support
 - **Developer:** Thaong Dev
 - **GitHub:** [github.com/thaong-dev](https://github.com/thaong-dev)
-- **Email:** [thay-email-cua-ban@gmail.com](mailto:thay-email-cua-ban@gmail.com)
+- **Email:** [thaong.dev@gmail.com](mailto:thaong.dev@gmail.com)
