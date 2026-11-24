@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thaong Dev | Mobile Camera & Barcode Solutions</title>
-    <meta name="description" content="Official developer page for Thaong Dev. High-performance mobile camera utilities, barcode scanners, and offline data processing applications.">
+    <title>Mobile Computing Solutions (Thaong Dev) | Offline Android Utilities</title>
+    <meta name="description" content="Official developer page for Mobile Computing Solutions (Thaong Dev). Ultra-lightweight, offline-first C++ Android apps: QR Scanner, PDF Editor, and Cam 365 Media Editor.">
     <style>
         :root {
             --bg-main: #0f172a;
             --bg-card: #1e293b;
+            --bg-subtle: #162032;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --accent: #38bdf8;
             --accent-hover: #0284c7;
+            --accent-warm: #fb923c;
             --border: #334155;
         }
 
@@ -22,15 +24,19 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-main);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 940px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -38,10 +44,10 @@
         /* Header */
         header {
             border-bottom: 1px solid var(--border);
-            padding: 20px 0;
+            padding: 18px 0;
             position: sticky;
             top: 0;
-            background: rgba(15, 23, 42, 0.9);
+            background: rgba(15, 23, 42, 0.92);
             backdrop-filter: blur(8px);
             z-index: 100;
         }
@@ -50,27 +56,35 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 16px;
         }
 
         .logo {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--text-primary);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
+            white-space: nowrap;
         }
 
         .logo span {
             color: var(--accent);
         }
 
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            margin-left: 24px;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
+            font-weight: 500;
             transition: color 0.2s;
         }
 
@@ -80,7 +94,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 70px 0 50px;
+            padding: 68px 0 48px;
             text-align: center;
         }
 
@@ -92,24 +106,25 @@
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 20px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            margin-bottom: 18px;
+            border: 1px solid rgba(56, 189, 248, 0.22);
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.35rem;
             margin-bottom: 16px;
             letter-spacing: -0.5px;
+            line-height: 1.25;
         }
 
         .hero p {
             color: var(--text-secondary);
-            font-size: 1.1rem;
-            max-width: 650px;
-            margin: 0 auto 30px;
+            font-size: 1.08rem;
+            max-width: 680px;
+            margin: 0 auto 28px;
         }
 
-        /* Features Grid */
+        /* Sections & Grid */
         .section-title {
             font-size: 1.5rem;
             margin-bottom: 24px;
@@ -119,9 +134,9 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
             gap: 20px;
-            margin-bottom: 60px;
+            margin-bottom: 56px;
         }
 
         .card {
@@ -129,48 +144,115 @@
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-tag {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: var(--accent);
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-bottom: 12px;
         }
 
         .card h3 {
-            color: var(--accent);
+            color: var(--text-primary);
             margin-bottom: 10px;
-            font-size: 1.15rem;
+            font-size: 1.18rem;
         }
 
         .card p {
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: 0.94rem;
+            margin-bottom: 14px;
+            flex-grow: 1;
         }
 
-        /* Privacy Policy Section */
-        .privacy-box {
+        .pkg-id {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+
+        /* Legal Boxes (Privacy & Terms) */
+        .legal-box {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 32px;
-            margin-bottom: 60px;
+            margin-bottom: 48px;
         }
 
-        .privacy-box h2 {
-            color: var(--text-primary);
+        .legal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 12px;
             margin-bottom: 16px;
-            font-size: 1.5rem;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border);
         }
 
-        .privacy-box h4 {
+        .legal-box h2 {
+            color: var(--text-primary);
+            font-size: 1.55rem;
+        }
+
+        .legal-meta {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .legal-box h4 {
             color: var(--accent);
-            margin: 20px 0 8px;
+            margin: 22px 0 8px;
             font-size: 1.05rem;
         }
 
-        .privacy-box p, .privacy-box ul {
+        .legal-box p, .legal-box ul {
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 12px;
         }
 
-        .privacy-box ul {
-            padding-left: 20px;
+        .legal-box ul {
+            padding-left: 22px;
+        }
+
+        .legal-box li {
+            margin-bottom: 6px;
+        }
+
+        .legal-box a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .legal-box a:hover {
+            text-decoration: underline;
+        }
+
+        .callout {
+            background: var(--bg-subtle);
+            border-left: 3px solid var(--accent);
+            padding: 14px 16px;
+            border-radius: 6px;
+            margin: 16px 0;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
         }
 
         /* Contact & Footer */
@@ -180,7 +262,7 @@
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 12px;
-            margin-bottom: 60px;
+            margin-bottom: 56px;
         }
 
         .btn {
@@ -192,25 +274,64 @@
             border-radius: 8px;
             text-decoration: none;
             margin-top: 16px;
-            transition: background 0.2s;
+            transition: background 0.2s, color 0.2s;
         }
 
         .btn:hover {
             background: var(--accent-hover);
-            color: #fff;
+            color: #ffffff;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: #0f172a;
+            text-decoration: none;
         }
 
         footer {
             border-top: 1px solid var(--border);
             text-align: center;
-            padding: 30px 0;
+            padding: 28px 0;
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
 
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 1.9rem; }
-            .nav-links { display: none; }
+        .footer-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 0.88rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.85rem; }
+            .nav { flex-direction: column; align-items: flex-start; }
+            .nav-links { gap: 14px; }
+            .legal-box { padding: 22px 18px; }
         }
     </style>
 </head>
@@ -218,10 +339,11 @@
 
     <header>
         <div class="container nav">
-            <a href="#" class="logo">[ <span>Thaong</span> Dev ]</a>
+            <a href="index.html" class="logo">[ <span>Mobile Computing</span> Solutions ]</a>
             <nav class="nav-links">
-                <a href="#solutions">Solutions</a>
+                <a href="#apps">Apps</a>
                 <a href="#privacy">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
                 <a href="#contact">Support</a>
             </nav>
         </div>
@@ -229,66 +351,127 @@
 
     <main class="container">
         <section class="hero">
-            <div class="badge">Mobile Vision & Data Utilities</div>
-            <h1>High-Performance Camera & Barcode Applications</h1>
-            <p>Developing fast, lightweight, and offline-capable mobile utilities specializing in optical barcode decoding, custom camera pipelines, and structured data management.</p>
+            <div class="badge">Thaong Dev &bull; Offline-First Native C++ Utilities</div>
+            <h1>Fast, Lightweight &amp; Private Mobile Applications</h1>
+            <p>Mobile Computing Solutions builds compact, high-performance Android utilities engineered in native C++. Every tool is designed to run 100% offline with zero bloat, minimal storage footprint, and full user control over local data.</p>
         </section>
 
-        <section id="solutions">
-            <h2 class="section-title">Core Expertise</h2>
+        <section id="apps">
+            <h2 class="section-title">Our Applications</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>1D/2D Barcode Decoding</h3>
-                    <p>Ultra-fast scanning and recognition for QR codes, DataMatrix, EAN, Code 128, and industrial symbologies using optimized native algorithms.</p>
+                    <span class="app-tag">Barcode &amp; Data</span>
+                    <h3>QR Scanner</h3>
+                    <p>Ultra-fast offline 1D/2D barcode and QR code scanner with batch inventory logs, instant CSV/Excel (XLSX) export, and optional LAN synchronization with our Desktop PC Hub.</p>
+                    <span class="pkg-id">dev.thaong.qrscanner</span>
                 </div>
                 <div class="card">
-                    <h3>Smart Camera Processing</h3>
-                    <p>Real-time frame analysis, image enhancement, and optical character recognition (OCR) engineered for low latency and minimal battery consumption.</p>
+                    <span class="app-tag">Documents &amp; Office</span>
+                    <h3>PDF Editor: Fast PDF to Excel</h3>
+                    <p>Native C++ offline PDF viewer, fast PDF-to-Excel table extractor, and pixel-level visual &amp; structural PDF diff comparison tool with optional LAN Desktop PC Hub support.</p>
+                    <span class="pkg-id">dev.thaong.pdfeditor</span>
                 </div>
                 <div class="card">
-                    <h3>Offline Data Workflows</h3>
-                    <p>Seamless local data processing and instant export to structured formats (CSV, Excel/XLSX) without requiring an active internet connection.</p>
+                    <span class="app-tag">Camera &amp; Media</span>
+                    <h3>Cam 365: Camera, Video &amp; Audio</h3>
+                    <p>Lightweight offline replacement for stock camera and media apps: instant photo &amp; HD video capture, light photo/video editing, local music &amp; video playback, audio cutting/merging, and voice recording.</p>
+                    <span class="pkg-id">dev.thaong.mediaeditor</span>
                 </div>
             </div>
         </section>
 
         <section id="privacy">
-            <div class="privacy-box">
-                <h2>Privacy Policy</h2>
-                <p><strong>Effective Date:</strong> November 2026</p>
-                <p>Thaong Dev ("we", "our", or "us") is committed to protecting user privacy. This Privacy Policy explains how our mobile applications handle permissions and user data.</p>
+            <div class="legal-box">
+                <div class="legal-header">
+                    <h2>Privacy Policy</h2>
+                    <span class="legal-meta"><strong>Last Updated:</strong> November 24, 2026</span>
+                </div>
 
-                <h4>1. Camera Permission (android.permission.CAMERA)</h4>
-                <p>Our applications request access to your device's camera strictly for real-time barcode scanning, QR code decoding, and optical recognition functionality.</p>
+                <p><strong>Mobile Computing Solutions (Thaong Dev)</strong> ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how our Android applications—including <strong>QR Scanner</strong> (<code>dev.thaong.qrscanner</code>), <strong>PDF Editor: Fast PDF to Excel</strong> (<code>dev.thaong.pdfeditor</code>), and <strong>Cam 365: Camera, Video &amp; Audio</strong> (<code>dev.thaong.cam365</code>)—handle device permissions, local files, advertising, and in-app purchases.</p>
+
+                <div class="callout">
+                    <strong>Offline-First Principle:</strong> All core features—scanning barcodes, reading/converting/comparing PDF documents, capturing photos and videos, editing media, playing local files, and recording audio—operate locally on your device. We do not require user accounts and we never upload your personal files, photos, documents, or recordings to our servers.
+                </div>
+
+                <h4>1. Device Permissions We Use</h4>
                 <ul>
-                    <li>All video frames and camera images are processed locally in real-time within your device's memory (RAM).</li>
-                    <li>We <strong>do not</strong> record, store, or transmit your camera feed or personal photos to any external servers or third parties.</li>
+                    <li><strong>Camera (<code>CAMERA</code>):</strong> Used in <em>QR Scanner</em> for real-time barcode/QR decoding, in <em>PDF Editor</em> for document capture, and in <em>Cam 365</em> for taking photos and recording videos. Camera frames are processed locally in real time and are never transmitted to external servers.</li>
+                    <li><strong>Microphone / Audio Recording (<code>RECORD_AUDIO</code>):</strong> Used exclusively in <em>Cam 365</em> to capture audio during video recording and offline voice memo recording. Audio streams are processed locally (including on-device noise suppression) and saved directly to your device storage.</li>
+                    <li><strong>Local Files &amp; Media Storage (MediaStore / Storage Access Framework):</strong> Used across all three apps to open, edit, play, and export user-selected files (such as PDFs, Excel/CSV spreadsheets, photos, videos, and audio tracks). You retain full ownership and control over every file stored on your device.</li>
+                    <li><strong>Local Network / Wi-Fi Access (LAN Sync):</strong> Used optionally when you connect your mobile app to our companion Desktop PC Hub over your private local network (Wi-Fi/LAN) for data transfer or desktop license activation. No data is routed through cloud servers.</li>
                 </ul>
 
-                <h4>2. Local Storage & Data Processing</h4>
-                <p>Any scanned barcode records, text data, or exported files (such as CSV or XLSX files) generated within our apps are stored locally on your device under your direct control. We do not collect or harvest your business or personal scan logs.</p>
+                <h4>2. Advertising &amp; Advertising ID (Free Versions)</h4>
+                <p>Free versions of our applications display advertisements served by <strong>Google AdMob</strong> (Google Mobile Ads SDK). To deliver ads, measure ad performance, and prevent invalid traffic or fraud, Google AdMob may automatically collect and process certain device information, including your device's <strong>Advertising ID (<code>AD_ID</code>)</strong>, IP address, coarse location, and app interaction/diagnostic data.</p>
+                <ul>
+                    <li>Purpose of collection by Google AdMob: <em>Advertising or marketing</em>, <em>Analytics</em>, and <em>Fraud prevention, security, and compliance</em>.</li>
+                    <li>You can reset or opt out of personalized advertising at any time via your Android device settings (<em>Settings &rarr; Google &rarr; Ads</em>), or upgrade to the <strong>Pro Lifetime</strong> edition to permanently disable all advertisements.</li>
+                    <li>Learn more about how Google handles data in ads at <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Advertising Privacy &amp; Terms</a>.</li>
+                </ul>
 
-                <h4>3. Third-Party Data Sharing</h4>
-                <p>We do not sell, trade, or transfer your personally identifiable information to outside parties. Our core scanning tools are designed to operate 100% offline.</p>
+                <h4>3. In-App Purchases &amp; Billing Data</h4>
+                <p>Our applications offer optional one-time in-app purchases (such as <code>pro_lifetime</code> for mobile unlocks and <code>pc_hub</code> for desktop companion slots) processed strictly through <strong>Google Play Billing</strong>.</p>
+                <ul>
+                    <li>We <strong>do not</strong> collect, view, or store your credit card numbers, bank details, or payment credentials.</li>
+                    <li>Purchase tokens, order IDs, and local purchase status are used solely to verify entitlements, restore your Pro upgrade on Android, and generate offline cryptographic licenses for connected Desktop PC Hub devices.</li>
+                </ul>
 
-                <h4>4. Changes to This Policy</h4>
-                <p>We may update this Privacy Policy from time to time. Any changes will be posted directly on this page.</p>
+                <h4>4. Data Sharing &amp; Selling</h4>
+                <p>We do not sell your personal data. Aside from data automatically processed by trusted platform SDKs required for app monetization and billing (Google AdMob and Google Play Billing), we do not share your documents, media, scan logs, or personal information with any third parties.</p>
+
+                <h4>5. Data Retention &amp; Deletion</h4>
+                <p>Because our apps do not maintain user accounts or cloud databases, all app-generated data (scan history, exported Excel/PDF files, edited photos/videos, and recordings) resides exclusively on your device. You may delete any file at any time inside the app or via your device's file manager, and uninstalling the app removes its private local app data.</p>
+
+                <h4>6. Children's Privacy</h4>
+                <p>Our applications are general productivity and media utilities intended for general audiences and are <strong>not directed to children under the age of 13</strong> (or the applicable minimum age in your jurisdiction). We do not knowingly collect personal information from children.</p>
+
+                <h4>7. Changes to This Privacy Policy</h4>
+                <p>We may update this Privacy Policy periodically to reflect app improvements or legal requirements. Updates take effect immediately upon posting on this page with an updated effective date.</p>
+            </div>
+        </section>
+
+        <section id="terms">
+            <div class="legal-box">
+                <div class="legal-header">
+                    <h2>Terms of Service</h2>
+                    <a href="terms.html" class="btn-outline">Open Full Standalone Page &rarr;</a>
+                </div>
+
+                <p>By downloading, installing, or using <strong>QR Scanner</strong>, <strong>PDF Editor: Fast PDF to Excel</strong>, or <strong>Cam 365: Camera, Video &amp; Audio</strong> developed by <strong>Mobile Computing Solutions (Thaong Dev)</strong>, you agree to our Terms of Service.</p>
+
+                <ul>
+                    <li><strong>License &amp; Acceptable Use:</strong> We grant you a limited, non-exclusive, non-transferable license to use our apps on compatible Android devices. You may not reverse engineer, decompile, redistribute modified copies, or bypass licensing checks.</li>
+                    <li><strong>Pro Lifetime &amp; PC Hub Purchases:</strong> All in-app purchases are billed through Google Play. <em>Pro Lifetime</em> unlocks mobile features permanently on your Google Play account. <em>PC Hub</em> licenses are hardware-bound via local LAN activation to a specific desktop computer and operate offline afterward. Refunds follow Google Play's refund policy and applicable statutory consumer laws.</li>
+                    <li><strong>User Content &amp; Backups:</strong> You retain 100% ownership of all documents, photos, videos, and audio processed offline in our apps. You are responsible for maintaining backups of important files and complying with local laws when recording audio/video or editing copyrighted media.</li>
+                    <li><strong>Open-Source Notices &amp; Liability:</strong> Our apps incorporate open-source software components under their respective licenses (including FFmpeg under LGPL, OpenCV, Axmol, miniaudio, and WebRTC APM). Software is provided "as is" without limiting your mandatory consumer rights under applicable law.</li>
+                </ul>
+
+                <p style="margin-top: 14px;">Read the complete legal terms on our dedicated page: <a href="terms.html"><strong>https://thaong-dev.github.io/terms.html</strong></a></p>
             </div>
         </section>
 
         <section id="contact">
             <div class="contact-box">
-                <h2>Developer Support & Contact</h2>
-                <p style="color: var(--text-secondary); margin-top: 8px;">Have questions, feedback, or need technical support regarding our applications?</p>
+                <h2>Developer Support &amp; Contact</h2>
+                <p style="color: var(--text-secondary); margin-top: 8px;">Questions, bug reports, licensing assistance, or privacy inquiries regarding QR Scanner, PDF Editor, or Cam 365?</p>
                 <a href="mailto:thaong.dev@gmail.com" class="btn">Email Support: thaong.dev@gmail.com</a>
-                <p style="color: var(--text-secondary); margin-top: 16px; font-size: 0.85rem;">GitHub: <a href="https://github.com/thaong-dev" style="color: var(--accent);">github.com/thaong-dev</a></p>
+                <p style="color: var(--text-secondary); margin-top: 16px; font-size: 0.88rem;">
+                    Developer: <strong>Mobile Computing Solutions (Thaong Dev)</strong> &bull;
+                    GitHub: <a href="https://github.com/thaong-dev" style="color: var(--accent);">github.com/thaong-dev</a>
+                </p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Thaong Dev. All rights reserved.</p>
+            <p>&copy; 2026 Mobile Computing Solutions (Thaong Dev). All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#apps">Applications</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:thaong.dev@gmail.com">thaong.dev@gmail.com</a>
+            </div>
         </div>
     </footer>
 

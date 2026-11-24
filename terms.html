@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Mobile Computing Solutions (Thaong Dev)</title>
+    <meta name="description" content="Official Terms of Service for Android and Desktop applications by Mobile Computing Solutions (Thaong Dev): QR Scanner, PDF Editor, and Cam 365 Media Editor.">
+    <style>
+        :root {
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --bg-subtle: #162032;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --border: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.68;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        main {
+            padding: 44px 0 60px;
+        }
+
+        .legal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 36px;
+        }
+
+        .doc-badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(56, 189, 248, 0.22);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            letter-spacing: -0.4px;
+        }
+
+        .meta {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.15rem;
+            margin: 28px 0 10px;
+        }
+
+        p, ul, ol {
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+            margin-bottom: 12px;
+        }
+
+        ul, ol {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.86rem;
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            padding: 1px 6px;
+            border-radius: 5px;
+            color: #cbd5e1;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .app-list {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 16px 0 20px;
+        }
+
+        .app-list ul {
+            margin-bottom: 0;
+        }
+
+        .contact-panel {
+            margin-top: 28px;
+            padding: 20px 24px;
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 28px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 0.88rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 640px) {
+            .nav { flex-direction: column; align-items: flex-start; }
+            .legal-card { padding: 24px 18px; }
+            h1 { font-size: 1.65rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">[ <span>Mobile Computing</span> Solutions ]</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#apps">Apps</a>
+                <a href="index.html#privacy">Privacy Policy</a>
+                <a href="terms.html" class="active">Terms of Service</a>
+                <a href="index.html#contact">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="legal-card">
+            <span class="doc-badge">Legal Agreement</span>
+            <h1>Terms of Service</h1>
+            <p class="meta">
+                <strong>Effective Date:</strong> November 24, 2026 &nbsp;&bull;&nbsp;
+                <strong>Developer / Trader:</strong> Mobile Computing Solutions (Thaong Dev)
+            </p>
+
+            <p>Please read these Terms of Service ("Terms") carefully before downloading, installing, or using any mobile or companion desktop software published by <strong>Mobile Computing Solutions (Thaong Dev)</strong> ("we", "our", or "us"). By accessing or using our applications, you agree to be bound by these Terms.</p>
+
+            <h2>1. Scope &amp; Covered Applications</h2>
+            <p>These Terms apply to all applications, updates, and companion desktop tools distributed by Mobile Computing Solutions on Google Play and via our official web page (<code>https://thaong-dev.github.io/</code>), including:</p>
+            <div class="app-list">
+                <ul>
+                    <li><strong>QR Scanner</strong> (<code>dev.thaong.qrscanner</code>) — Offline barcode &amp; QR decoding, structured CSV/Excel export, and optional LAN desktop sync.</li>
+                    <li><strong>PDF Editor: Fast PDF to Excel</strong> (<code>dev.thaong.pdfeditor</code>) — Offline PDF viewing, PDF-to-Excel extraction, visual/structural PDF comparison, and optional LAN desktop sync.</li>
+                    <li><strong>Cam 365: Camera, Video &amp; Audio</strong> (<code>dev.thaong.cam365</code>) — Offline camera, HD video capture, light photo &amp; video editing, local media playback, audio cutting/merging, and voice recording.</li>
+                </ul>
+            </div>
+
+            <h2>2. License Grant &amp; Restrictions</h2>
+            <p>Subject to your compliance with these Terms, we grant you a personal, limited, non-exclusive, non-transferable, revocable license to install and use our applications on compatible devices that you own or control.</p>
+            <p>You agree that you will <strong>not</strong>:</p>
+            <ul>
+                <li>Copy, modify, distribute, sell, sublicense, or publish modified versions (such as patched or cracked APKs) of our applications.</li>
+                <li>Reverse engineer, decompile, disassemble, or attempt to extract source code, cryptographic signing keys, or licensing logic, except to the extent expressly permitted by applicable law.</li>
+                <li>Bypass, tamper with, or share offline license keys or hardware-bound activation files across unauthorized devices.</li>
+                <li>Use our applications for any unlawful purpose, including unauthorized surveillance, illegal audio/video recording without required consent, or infringement of third-party copyrights.</li>
+            </ul>
+
+            <h2>3. In-App Purchases, Licensing &amp; Refunds</h2>
+            <p>Core features of our applications are available free of charge (supported by ads in free editions). Optional paid upgrades are offered via <strong>Google Play Billing</strong>:</p>
+            <ul>
+                <li><strong>Mobile Pro Lifetime (<code>pro_lifetime</code>):</strong> A one-time, non-consumable purchase that removes advertisements and unlocks premium mobile features permanently for the Google Play account used at checkout. You can restore this license when reinstalling the app or switching Android devices using the same Google account.</li>
+                <li><strong>Desktop Companion License (<code>pc_hub</code>):</strong> A consumable in-app purchase that activates one companion desktop computer via local network (LAN) handshake. Once activated and saved to the target desktop machine, the desktop license runs offline independently. Reinstalling the operating system on the <em>same</em> hardware may be re-synced from the linked mobile device; activating a <em>new</em> desktop computer requires purchasing an additional <code>pc_hub</code> slot.</li>
+                <li><strong>Payments &amp; Refunds:</strong> All payments are processed securely by Google Play. Refund requests are governed by <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener noreferrer">Google Play's Refund Policies</a> and any mandatory consumer protection rights applicable in your country or region (including the European Economic Area and the United Kingdom).</li>
+            </ul>
+
+            <h2>4. Offline Operation &amp; User Content</h2>
+            <p>Our applications are engineered as offline-first local tools:</p>
+            <ul>
+                <li><strong>Ownership:</strong> You retain 100% ownership and responsibility for all documents, spreadsheets, barcode logs, photos, videos, music, and voice recordings processed or exported using our apps.</li>
+                <li><strong>No Cloud Backup:</strong> Because we do not operate cloud storage servers for your files, you are solely responsible for backing up important files stored on your device. We cannot recover files lost due to accidental deletion, device damage, or uninstallation.</li>
+                <li><strong>Media &amp; Recording Compliance:</strong> When using <em>Cam 365</em> to record audio/video or edit media files, you are responsible for complying with local privacy, wiretapping/consent, and copyright laws.</li>
+            </ul>
+
+            <h2>5. Privacy &amp; Third-Party Services</h2>
+            <p>Your use of our applications is also governed by our <a href="index.html#privacy">Privacy Policy</a>. Free versions integrate Google AdMob for advertising, and paid features use Google Play Billing. Your use of Google Play is subject to the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>.</p>
+
+            <h2>6. Intellectual Property &amp; Open-Source Software</h2>
+            <p>All application branding, icons, user interface designs, and proprietary C++/Java source code are the intellectual property of Mobile Computing Solutions (Thaong Dev).</p>
+            <p>Certain applications incorporate open-source libraries used in compliance with their respective licenses, including but not limited to <strong>Axmol Engine</strong> (MIT), <strong>OpenCV</strong> (Apache 2.0), <strong>miniaudio</strong> (MIT-0 / Public Domain), <strong>WebRTC Audio Processing</strong> (BSD-3-Clause), <strong>VanillaPDF</strong>, <strong>PDFium</strong> (BSD-3-Clause), and <strong>FFmpeg</strong> (LGPL v2.1+, dynamically linked as shared libraries). License notices and acknowledgments are made available within the respective applications.</p>
+
+            <h2>7. Disclaimer of Warranties &amp; Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable law, our applications are provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express or implied, including merchantability, fitness for a particular purpose, or uninterrupted error-free operation. While we strive for high accuracy in PDF conversion, visual diffing, barcode decoding, and media processing, you should independently verify critical business, financial, or legal outputs.</p>
+            <p>To the fullest extent permitted by law, Mobile Computing Solutions shall not be liable for any indirect, incidental, consequential, or special damages, or for any loss of local data or profits arising from the use or inability to use our applications. <strong>Nothing in these Terms excludes or limits any mandatory statutory warranty or consumer right that cannot legally be excluded under the laws of your jurisdiction (including EEA and UK consumer protection laws).</strong></p>
+
+            <h2>8. Updates, Modifications &amp; Termination</h2>
+            <p>We may update, modify, or discontinue features of our applications at any time to improve performance, maintain compatibility with newer Android versions, or comply with platform policies. We may also revise these Terms from time to time; the updated effective date will be displayed at the top of this page. Continued use of the applications after changes are posted constitutes acceptance of the revised Terms.</p>
+
+            <h2>9. Governing Law &amp; Contact Information</h2>
+            <p>These Terms are governed by the laws of Vietnam, without prejudice to any mandatory consumer protection laws applicable in your country of residence.</p>
+
+            <div class="contact-panel">
+                <p style="margin-bottom: 6px;"><strong>Developer / Trader Contact Details</strong></p>
+                <p style="margin-bottom: 4px;">Name: <strong>Mobile Computing Solutions (Thaong Dev)</strong></p>
+                <p style="margin-bottom: 4px;">Email: <a href="mailto:thaong.dev@gmail.com">thaong.dev@gmail.com</a></p>
+                <p style="margin-bottom: 4px;">Website: <a href="https://thaong-dev.github.io/">https://thaong-dev.github.io/</a></p>
+                <p style="margin-bottom: 0;">Privacy Policy: <a href="https://thaong-dev.github.io/#privacy">https://thaong-dev.github.io/#privacy</a></p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mobile Computing Solutions (Thaong Dev). All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#privacy">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:thaong.dev@gmail.com">thaong.dev@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
